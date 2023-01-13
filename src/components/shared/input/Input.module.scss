@@ -1,0 +1,29 @@
+.input {
+  background: #242424;
+  border: 0.75px solid #3d3d3d;
+  border-radius: 75px;
+  padding: 12px 20px;
+  transition: all 0.3s;
+
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 25px;
+  letter-spacing: 0.03em;
+  color: #f9f4f1;
+
+  &::placeholder {
+    font-family: "Mulish";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 19px;
+    letter-spacing: 0.03em;
+    color: #7f7f7f;
+  }
+
+  &:focus{
+    border-color: transparent;
+  }
+}
