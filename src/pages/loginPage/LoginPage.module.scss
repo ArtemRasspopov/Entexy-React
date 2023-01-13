@@ -1,0 +1,56 @@
+.login {
+  height: 100vh;
+  background-color: black;
+  display: flex;
+}
+
+.login__bgImage {
+  width: 396px;
+  height: 100%;
+  position: relative;
+  border-right: 2px solid#3D3D3D;
+
+  background-image: url("../../../public/images/backgrounds/login-bg/login-bg-1.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.login__inner {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-image: url("../../../public/images/backgrounds/login-bg/login-bg-2.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.login__form {
+  display: flex;
+  flex-direction: column;
+  width: 600px;
+
+  &_title {
+    font-family: "CATLinz";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 29px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: #f9f4f1;
+    margin-bottom: 25px;
+  }
+
+  &_inputs{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 53px;
+  }
+}

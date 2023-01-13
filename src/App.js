@@ -1,10 +1,12 @@
 import React from "react";
-import LoginPage from "./pages/loginPage/LoginPage";
+// import LoginPage from "./pages/loginPage/LoginPage";
+import MainPage from "./pages/mainPage/MainPage";
 
 function App() {
   return (
     <div className="app">
-      <LoginPage />
+      {/* <LoginPage /> */}
+      <MainPage/>
     </div>
   );
 }

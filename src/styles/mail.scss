@@ -1,5 +1,13 @@
+@import 'normalize.scss';
+
+body{
+  background-color: black;
+}
+
 .app{
   // background-color: aqua;
   font-family: CATLinz;
   font-size: 20px;
+  max-width: 1920px;
+  margin: 0 auto;
 }
