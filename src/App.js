@@ -12,7 +12,7 @@ function App() {
       <Header/>
       <MainPage/>
       {/* <ImagePage/> */}
-      <Footer/>
+      {/* <Footer/> */}
     </div>
   );
 }

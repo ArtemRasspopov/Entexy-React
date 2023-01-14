@@ -28,7 +28,7 @@ const MainPage = () => {
           <ul className={style.imagesList}>
             {new Array(12).fill('0').map((item, index) => (
               <li className={style.imagesList__item} key={index}>
-                
+                <img src="./images/test-image.jpg" alt="sdsd" />
               </li>
             ))}
           </ul>
