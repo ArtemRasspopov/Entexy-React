@@ -1,8 +1,8 @@
 import React from "react";
 import Footer from "./components/footer/Footer";
 import Header from "./components/header/Header";
-import ImagePage from "./pages/imagePage/ImagePage";
-import LoginPage from "./pages/loginPage/LoginPage";
+// import ImagePage from "./pages/imagePage/ImagePage";
+// import LoginPage from "./pages/loginPage/LoginPage";
 import MainPage from "./pages/mainPage/MainPage";
 
 function App() {
@@ -12,7 +12,7 @@ function App() {
       <Header/>
       <MainPage/>
       {/* <ImagePage/> */}
-      {/* <Footer/> */}
+      <Footer/>
     </div>
   );
 }
