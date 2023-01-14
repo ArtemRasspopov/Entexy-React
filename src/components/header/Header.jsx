@@ -1,5 +1,6 @@
 import React from "react";
 import Container from "../shared/container/Container";
+import LogoutSvg from "../shared/svg/LogoutSvg";
 import style from "./Header.module.scss";
 
 const Header = () => {
@@ -13,7 +14,10 @@ const Header = () => {
           <a className={style.header__username} href={"/"}>
             USERNAME
           </a>
-          <button className={style.header__logout}>Logout</button>
+          <button className={style.header__logout}>
+            Logout
+            <LogoutSvg />
+          </button>
         </div>
       </Container>
     </div>

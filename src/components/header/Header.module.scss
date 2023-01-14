@@ -18,11 +18,16 @@
 
 .header__username {
   color: #ffffff;
-  margin: 0 32px 0 auto
+  margin: 0 32px 0 auto;
 }
 
 .header__logout {
-  color: #FF9110;
+  color: #ff9110;
+  display: flex;
+
+  svg{
+    display: none;
+  }
 }
 
 .logo {
@@ -34,4 +39,32 @@
   letter-spacing: 0.225em;
   text-transform: uppercase;
   color: #ffffff;
+}
+
+@media (max-width: 576px) {
+  .logo {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 130%;
+  }
+
+  .header__inner {
+    padding: 12px 0 9px;
+  }
+
+  .header__username {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 130%;
+    margin-right: 10px;
+  }
+
+  .header__logout {
+    font-size: 0;
+
+    svg{
+      display: block;
+    }
+  }
 }
