@@ -75,7 +75,7 @@ const Footer = () => {
         <Container>
           <div className={style.bottom__inner}>
             <p>2022-2023 All rights reserved</p>
-            <p>Site is developed by <u>Artem Rasspopov</u></p>
+            <p>Site is developed by <u>ME</u></p>
           </div>
         </Container>
       </div>

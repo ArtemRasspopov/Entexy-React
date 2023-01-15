@@ -104,12 +104,19 @@
 
   .inner__item {
     max-width: 100% !important;
-    order: unset !important;
+    order: unset;
   }
 
   .contacts__item_title,
   .contacts__item_address,
-  .contacts__item_number {
-    color: #e5e0dd;
+  .inner__item_text {
+    font-size: 12px;
+    line-height: 22px;
+  }
+
+  .bottom__inner {
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 19px;
   }
 }
