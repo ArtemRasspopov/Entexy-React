@@ -5,7 +5,7 @@
 }
 
 .login__bgImage {
-  width: 396px;
+  width: 400px;
   height: 100%;
   position: relative;
   border-right: 2px solid#3D3D3D;
@@ -31,7 +31,10 @@
 .login__form {
   display: flex;
   flex-direction: column;
-  width: 600px;
+  max-width: 600px;
+  min-width: 400px;
+  width: 100%;
+  margin: 0 20px;
 
   &_title {
     font-family: "CATLinz";
@@ -39,18 +42,47 @@
     font-weight: 400;
     font-size: 30px;
     line-height: 29px;
-    display: flex;
-    align-items: center;
     letter-spacing: 0.02em;
     text-transform: uppercase;
     color: #f9f4f1;
     margin-bottom: 25px;
   }
 
-  &_inputs{
+  &_inputs {
     display: flex;
     flex-direction: column;
     gap: 15px;
     margin-bottom: 53px;
+  }
+}
+
+@media (max-width: 576px) {
+  .login__bgImage {
+    display: none;
+  }
+
+  .login__inner {
+    background: #161616;
+  }
+
+  .login__form {
+    margin: 0 16px;
+    min-width: auto;
+    height: 100%;
+    padding-top: 141px;
+
+    &_title {
+      margin-bottom: 60px;
+      text-align: center;
+    }
+  }
+
+  .button_wrapper {
+    width: 100%;
+    margin-top: auto;
+    margin-bottom: 50px;
+    button {
+      width: 100%;
+    }
   }
 }
