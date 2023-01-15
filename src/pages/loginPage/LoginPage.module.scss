@@ -1,10 +1,10 @@
-.login {
+.wrapper {
   height: 100vh;
   background-color: black;
   display: flex;
 }
 
-.login__bgImage {
+.bgImage {
   width: 400px;
   height: 100%;
   position: relative;
@@ -16,7 +16,7 @@
   background-size: cover;
 }
 
-.login__inner {
+.inner {
   flex-grow: 1;
   display: flex;
   justify-content: center;
@@ -28,44 +28,73 @@
   background-size: cover;
 }
 
-.login__form {
+.form {
   display: flex;
   flex-direction: column;
   max-width: 600px;
   min-width: 400px;
   width: 100%;
   margin: 0 20px;
+}
 
-  &_title {
-    font-family: "CATLinz";
-    font-style: normal;
-    font-weight: 400;
-    font-size: 30px;
-    line-height: 29px;
-    letter-spacing: 0.02em;
-    text-transform: uppercase;
-    color: #f9f4f1;
-    margin-bottom: 25px;
+.form__title {
+  font-family: "CATLinz";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 29px;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: #f9f4f1;
+  margin-bottom: 25px;
+}
+
+.form__inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  position: relative;
+  margin-bottom: 53px;
+
+  input{
+    z-index: 1;
   }
+}
 
-  &_inputs {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    margin-bottom: 53px;
+.form__errorText {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 19px;
+  letter-spacing: 0.03em;
+  color: #f14b53;
+  position: absolute;
+  bottom: -25px;
+  left: 20px;
+  animation: fadeInTop forwards 0.2s;
+  z-index: 0;
+}
+
+@keyframes fadeInTop {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
   }
 }
 
 @media (max-width: 576px) {
-  .login__bgImage {
+  .bgImage {
     display: none;
   }
 
-  .login__inner {
+  .inner {
     background: #161616;
   }
 
-  .login__form {
+  .form {
     margin: 0 16px;
     min-width: auto;
     height: 100%;
