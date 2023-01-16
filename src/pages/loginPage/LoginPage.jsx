@@ -5,21 +5,20 @@ import Input from "../../components/shared/input/Input";
 import style from "./LoginPage.module.scss";
 
 const LoginPage = () => {
-  const [nameValue, setNameValue] = useState("");
-  const [passwordValue, setPasswordValue] = useState("");
-  const [formError, setFormError] = useState("");
-  const navigate = useNavigate()
-
-  useEffect(() => {
-    if (localStorage.getItem("authStatus") === 'authorized'){
-      navigate('/')
-    }
-  }, [navigate])
-
   const authorizationData = {
     name: "user",
     password: "user",
   };
+  const [nameValue, setNameValue] = useState("");
+  const [passwordValue, setPasswordValue] = useState("");
+  const [formError, setFormError] = useState("");
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (localStorage.getItem("authStatus") === "authorized") {
+      navigate("/");
+    }
+  }, [navigate]);
 
   const nameInputHandler = (event) => {
     setNameValue(event.target.value);
@@ -31,7 +30,7 @@ const LoginPage = () => {
     setFormError("");
   };
 
-  const formSubmit = async (event) => {
+  const formSubmit = (event) => {
     event.preventDefault();
 
     if (
@@ -39,8 +38,10 @@ const LoginPage = () => {
       passwordValue === authorizationData.password
     ) {
       setFormError("login");
-      await localStorage.setItem("authStatus", "authorized");
-      navigate('/')
+      localStorage.setItem("authStatus", "authorized");
+      navigate("/");
+    } else if (nameValue.length < 4 || passwordValue.length < 4) {
+      setFormError("Fields cannot be shorter than 4 characters");
     } else {
       setFormError("Wrong name or password. Please, try again");
     }

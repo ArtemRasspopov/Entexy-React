@@ -9,11 +9,15 @@ const ImageCard = ({ image }) => {
     navigate(`/image/${image.id}`);
   };
 
-  return (
-    <div className={style.wrapper} onClick={() => clickHandler()}>
-      {image && <img src={image.download_url} alt={image.author} />}
-    </div>
-  );
+  if (image) {
+    return (
+      <div className={style.wrapper} onClick={() => clickHandler()}>
+        <img src={image.download_url} alt={image.author} />
+      </div>
+    );
+  } else {
+    return <div className={style.wrapper}></div>;
+  }
 };
 
 export default ImageCard;

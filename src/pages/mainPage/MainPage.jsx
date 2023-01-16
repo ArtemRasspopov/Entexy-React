@@ -25,6 +25,12 @@ const MainPage = () => {
     fetchImages();
   }, []);
 
+  useEffect(() => {
+    if (error) {
+      alert("error");
+    }
+  }, [error]);
+
   const toPictureHandler = () => {
     titleRef.current.scrollIntoView();
   };
@@ -59,7 +65,7 @@ const MainPage = () => {
                     <ImageCard image={image} />
                   </li>
                 ))
-              : new Array(12).fill("1").map((item, index) => (
+              : new Array(12).fill(null).map((_, index) => (
                   <li className={style.imagesList__item} key={index}>
                     <ImageCard />
                   </li>

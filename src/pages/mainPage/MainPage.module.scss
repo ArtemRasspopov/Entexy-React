@@ -4,48 +4,53 @@
 }
 
 .header {
+  min-height: 500px;
+  max-height: 1080px;
   height: calc(100vh - 90px);
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 10px;
   justify-content: space-between;
-  position: relative;
+}
 
-  &__inner {
-    max-width: 512px;
-  }
+.header__inner {
+  max-width: 512px;
+}
 
-  &__title {
-    font-family: CATLinz;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 75px;
-    line-height: 71px;
-    letter-spacing: 0.02em;
-    text-transform: uppercase;
-    color: #ffffff;
-    margin-bottom: 20px;
-  }
+.header__title {
+  font-family: "CATLinz";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 75px;
+  line-height: 71px;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
 
-  &__subtitle {
-    font-family: Mulish;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 11.9974px;
-    line-height: 26px;
-    letter-spacing: 0.03em;
-    text-transform: uppercase;
-    color: #ffffff;
-    margin-bottom: 27px;
-  }
+.header__subtitle {
+  font-weight: 400;
+  font-size: 11.9974px;
+  line-height: 26px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin-bottom: 27px;
+}
 
-  &__buttonWrapper {
-    margin-left: 44px;
+.header__buttonWrapper {
+  margin-left: 44px;
+  button {
+    padding: 16px 80px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
   }
+}
 
-  &__image {
-    margin-right: -50px;
-  }
+.header__image {
+  margin-right: -50px;
 }
 
 .inner {
@@ -55,7 +60,7 @@
 }
 
 .title {
-  font-family: CATLinz;
+  font-family: "CATLinz";
   font-style: normal;
   font-weight: 400;
   font-size: 30px;
@@ -73,13 +78,15 @@
   row-gap: 20px;
 }
 
+
+
 @media (max-width: 1400px) {
   .header__image {
     margin-right: 0;
   }
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1230px) {
   .header__image {
     max-width: 50%;
   }
@@ -113,7 +120,7 @@
   }
 
   .header__inner {
-    max-width: 328px;
+    max-width: 360px;
   }
 
   .header__title {
@@ -143,6 +150,6 @@
   .title {
     font-size: 24px;
     line-height: 23px;
-    color: #F9F4F1;
+    color: #f9f4f1;
   }
 }

@@ -3,6 +3,7 @@
   justify-content: space-between;
   gap: 20px;
   padding-bottom: 26px;
+  position: relative;
 
   &__item:nth-child(1) {
     max-width: 314px;
@@ -41,30 +42,40 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
+}
 
-  &__item_title {
-    font-family: "Mulish";
-    font-style: normal;
-    font-weight: 600;
-    font-size: 12.0026px;
-    line-height: 15px;
-  }
+.contacts__item_title {
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12.0026px;
+  line-height: 15px;
+}
 
-  &__item_address,
-  &__item_number {
-    font-family: "Mulish";
-    font-style: normal;
-    font-weight: 400;
-    font-size: 12.0026px;
-    line-height: 15px;
-    color: #f9f4f1;
-  }
+.contacts__item_address,
+.contacts__item_number {
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12.0026px;
+  line-height: 15px;
+  color: #f9f4f1;
 }
 
 .cards {
   margin-top: 25px;
   display: flex;
   gap: 20px;
+}
+
+.cards__item {
+  width: 72px;
+  height: 37px;
+
+  img {
+    width: 100%;
+    object-fit: cover;
+  }
 }
 
 .bottom__inner {
@@ -84,7 +95,6 @@
 
 @media (max-width: 700px) {
   .inner {
-    // flex-direction: column;
     flex-wrap: wrap;
   }
   .inner__item:nth-child(2) {
@@ -94,6 +104,10 @@
 }
 
 @media (max-width: 576px) {
+  .inner {
+    padding-bottom: 110px;
+  }
+
   .inner__item_title {
     color: #f9f4f1;
   }
@@ -118,5 +132,22 @@
     font-weight: 400;
     font-size: 10px;
     line-height: 19px;
+  }
+
+  .cards {
+    position: absolute;
+    bottom: 30px;
+  }
+
+  .cards__item {
+    width: 97px;
+    height: 50px;
+  }
+}
+
+@media (max-width: 350px) {
+  .cards__item {
+    width: 60px;
+    height: 50px;
   }
 }
