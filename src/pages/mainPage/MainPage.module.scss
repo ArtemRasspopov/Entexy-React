@@ -71,20 +71,6 @@
   grid-template-columns: repeat(4, 1fr);
   column-gap: 23px;
   row-gap: 20px;
-
-  &__item {
-    display: flex;
-    justify-content: stretch;
-    height: 234px;
-    border-radius: 14.9968px;
-    overflow: hidden;
-    cursor: pointer;
-
-    img {
-      width: 100%;
-      object-fit: cover;
-    }
-  }
 }
 
 @media (max-width: 1400px) {
@@ -110,10 +96,6 @@
 
   .header__buttonWrapper {
     margin-left: 0;
-  }
-
-  .imagesList__item {
-    height: 200px;
   }
 }
 
@@ -162,9 +144,5 @@
     font-size: 24px;
     line-height: 23px;
     color: #F9F4F1;
-  }
-
-  .imagesList__item {
-    height: 122px;
   }
 }

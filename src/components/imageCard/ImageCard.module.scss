@@ -1,0 +1,27 @@
+.wrapper {
+  display: flex;
+  justify-content: stretch;
+  height: 234px;
+  border-radius: 14.9968px;
+  overflow: hidden;
+  cursor: pointer;
+  background-color: rgb(55, 55, 55);
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+@media (max-width: 1024px) {
+  .wrapper{
+    height: 200px;
+  }
+}
+
+@media (max-width: 576px) {
+  .wrapper{
+    height: 122px;
+  }
+}

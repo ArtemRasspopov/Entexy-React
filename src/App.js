@@ -17,21 +17,15 @@ function App() {
           element={
             <RequireAuth>
               <Header />
-              <MainPage />
+              <Routes>
+                <Route index element={<MainPage />} />
+                <Route path="/image/:id" element={<ImagePage />} />
+              </Routes>
               <Footer />
             </RequireAuth>
           }
         />
-        <Route
-          path="/image/:id"
-          element={
-            <RequireAuth>
-              <Header />
-              <ImagePage />
-              <Footer />
-            </RequireAuth>
-          }
-        />
+        <Route path="*" element={<h2>Ресурс не найден</h2>} />
       </Routes>
     </div>
   );
