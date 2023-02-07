@@ -13,7 +13,7 @@ const MainPage = () => {
     const fetchImages = async () => {
       try {
         const response = await fetch(
-          "https://picsum.photos/v2/list?page=1&limit=12"
+          "https://picsum.photos/v2/list?page=2&limit=12"
         );
         const data = await response.json();
         setImagesList(data);
